@@ -1,0 +1,41 @@
+{
+  "name": "dragon-reel-win",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win --publish never"
+  },
+  "build": {
+    "appId": "com.dragonsreel.app",
+    "productName": "DragonsReel",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "portable",
+      "icon": "assets/image.png",
+      "compression": "maximum",
+      "asar": true,
+      "asarUnpack": []
+    },
+    "files": [
+      "**/*",
+      "!**/*.map",
+      "!node_modules/.cache/**"
+    ],
+    "extraMetadata": {
+      "main": "main.js"
+    },
+    "buildVersion": "1.2.0",
+    "artifactName": "DragonsReel-${version}.${ext}"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^35.0.1",
+    "electron-builder": "^25.1.8"
+  }
+}
